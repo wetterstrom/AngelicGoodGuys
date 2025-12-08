@@ -43,6 +43,7 @@ namespace AngelicGoodGuys
 
         static void Main(string[] args)
         {
+
             Hair suspectHair = new Hair
             {
                 Length = "Long",
@@ -60,6 +61,9 @@ namespace AngelicGoodGuys
             Console.WriteLine($"This is the collected data from sprint 1: ");
             Console.WriteLine(suspect.ToString());
             Console.ReadKey();
+
+            
+
         }
     }
 }
