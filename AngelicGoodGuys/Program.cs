@@ -6,6 +6,8 @@
         {
             Console.WriteLine("Welcome to the Angelic Good Guys application!");
             Console.WriteLine();
+            
+            Hair personHair = new Hair
         }
     }
 }
