@@ -32,10 +32,10 @@ namespace AngelicGoodGuys
 
         public override string ToString()
         {
-            return $"Gender: {Gender}\n" +
-                   $"Hair: {Hair.Color}, {Hair.Length}\n" +
-                   $"Birthday: {DateOfBirth.ToShortDateString()}\n" +
-                   $"Eye color: {EyeColor}";
+            return $"Kön: {Gender}\n" +
+                   $"Hår: {Hair.Color}, {Hair.Length}\n" +
+                   $"Födelsedag: {DateOfBirth.ToShortDateString()}\n" +
+                   $"Ögonfärg: {EyeColor}";
         }
     }
 
@@ -105,6 +105,12 @@ namespace AngelicGoodGuys
                 Console.WriteLine("Felaktigt datumformat. Försök igen.");
                 return;
             }
+
+            Console.WriteLine("Ange ögonfärg:");
+            newPerson.EyeColor = Console.ReadLine();
+
+            List.Add(newPerson);
+
 
         }
         static void ListPersons()
