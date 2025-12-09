@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 using System.Drawing;
 using System.Security.Cryptography.X509Certificates;
 
@@ -43,7 +44,9 @@ namespace AngelicGoodGuys
         static List<Person> list = new List<Person>();
         static void Main(string[] args)
         {
-            while (true)
+            bool isRunning = true;
+
+            while (isRunning)
             {
                 Console.WriteLine("EVIL EAVESDROPPERS INC.");
                 Console.WriteLine("1. Lägg till person");
@@ -54,9 +57,24 @@ namespace AngelicGoodGuys
 
                 switch (choice)
                 {
-                
+                    case "1":
+                        AddPerson();
+                        break;
+
+                    case "2":
+                        ListPersons();
+                        break;
+
+                    case "3":
+                        Console.WriteLine("Avslutar programmet");
+                        isRunning = false;
+                        break;
+                    
                 }
             }
+        }
+        static void AddPerson()
+        {
 
         }
     }
