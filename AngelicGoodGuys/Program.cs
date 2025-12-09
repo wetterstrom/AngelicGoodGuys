@@ -40,29 +40,9 @@ namespace AngelicGoodGuys
 
     class Program
     {
-
+        static List<Person> list = new List<Person>();
         static void Main(string[] args)
         {
-
-            Hair suspectHair = new Hair
-            {
-                Length = "Long",
-                Color = "Blonde"
-            };
-
-            Person suspect = new Person
-            {
-                Gender = Gender.Female,
-                Hair = suspectHair,
-                DateOfBirth = new DateTime(1999, 3, 16),
-                EyeColor = "Blue"
-            };
-
-            Console.WriteLine($"This is the collected data from sprint 1: ");
-            Console.WriteLine(suspect.ToString());
-            Console.ReadKey();
-
-            
 
         }
     }
