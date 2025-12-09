@@ -43,6 +43,20 @@ namespace AngelicGoodGuys
         static List<Person> list = new List<Person>();
         static void Main(string[] args)
         {
+            while (true)
+            {
+                Console.WriteLine("EVIL EAVESDROPPERS INC.");
+                Console.WriteLine("1. Lägg till person");
+                Console.WriteLine("2. Se en lista med alla personer");
+                Console.WriteLine("3. Avsluta programmet");
+
+                string choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                
+                }
+            }
 
         }
     }
