@@ -1,0 +1,10 @@
+[33m3870482[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33m9df2b3a[m HEAD@{1}: commit: test
+[33m3870482[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m HEAD@{2}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m05ca999[m HEAD@{3}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33mc427035[m HEAD@{4}: commit (merge): Sprint 1
+[33m4074434[m HEAD@{5}: commit: Sprint 1
+[33m2244d6b[m HEAD@{6}: commit: andra uppdatereing klar
+[33m5b3cad4[m HEAD@{7}: commit: Första push
+[33mdbe42dd[m HEAD@{8}: commit: Add project files.
+[33mb608ebb[m HEAD@{9}: commit (initial): Add .gitattributes and .gitignore.

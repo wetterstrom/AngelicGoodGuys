@@ -7,10 +7,10 @@ namespace AngelicGoodGuys
 {
     public enum Gender
     {
-        Male,
-        Female,
-        NonBinary,
-        Other
+        Man,
+        Kvinna,
+        Annat
+
     }
 
     public struct Hair
@@ -41,7 +41,7 @@ namespace AngelicGoodGuys
 
     class Program
     {
-        static List<Person> list = new List<Person>();
+        static List<Person> List = new List<Person>();
         static void Main(string[] args)
         {
             bool isRunning = true;
@@ -69,13 +69,52 @@ namespace AngelicGoodGuys
                         Console.WriteLine("Avslutar programmet");
                         isRunning = false;
                         break;
-                    
+
                 }
             }
         }
         static void AddPerson()
         {
+            Person newPerson = new Person();
+            Console.WriteLine("Du ska nu få ge signalement för personen");
+            Console.WriteLine("Ange kön. Skriv '0' för Man, '1' för Kvinna, '2' för Annat:");
+            string GenderInput = Console.ReadLine();
+            newPerson.Gender = GenderInput switch { "0" => Gender.Man, "1" => Gender.Kvinna, "2" => Gender.Annat };
 
+            if (0 != int.Parse(GenderInput) && 1 != int.Parse(GenderInput) && 2 != int.Parse(GenderInput))
+            {
+                Console.WriteLine("Felaktig inmatning för kön. Försök igen.");
+                return;
+            }
+
+            Hair newHair = new Hair();
+            Console.WriteLine("Ange hårfärg:");
+            newHair.Color = Console.ReadLine();
+            Console.WriteLine("Ange hårlängd:");
+            newHair.Length = Console.ReadLine();
+            newPerson.Hair = newHair;
+
+            Console.WriteLine("Ange födelsedatum (ÅÅÅÅ-MM-DD):");
+            string dobInput = Console.ReadLine();
+            if (DateTime.TryParse(dobInput, out DateTime dob))
+            {
+                newPerson.DateOfBirth = dob;
+            }
+            else
+            {
+                Console.WriteLine("Felaktigt datumformat. Försök igen.");
+                return;
+            }
+
+        }
+        static void ListPersons()
+        {
+            Console.WriteLine("Lista över alla personer:");
+            foreach (Person p in List)
+            {
+                Console.WriteLine(p.ToString());
+                Console.WriteLine("---------------------");
+            }
         }
     }
 }
