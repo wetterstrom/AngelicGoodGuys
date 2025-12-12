@@ -6,6 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace AngelicGoodGuys
 {
+    // Enum för att representera kön
     public enum Gender
     {
         Man,
@@ -13,7 +14,7 @@ namespace AngelicGoodGuys
         Annat
 
     }
-
+    // Struct för att representera håregenskaper
     public struct Hair
     {
         public string Length { get; set; }
@@ -99,6 +100,7 @@ namespace AngelicGoodGuys
 
             if (0 != int.Parse(GenderInput) && 1 != int.Parse(GenderInput) && 2 != int.Parse(GenderInput))
             {
+                // Hanterar ogiltig inmatning för kön
                 Console.WriteLine("Felaktig inmatning för kön. Försök igen.");
                 return;
             }
@@ -120,6 +122,7 @@ namespace AngelicGoodGuys
             }
             else
             {
+                // Hanterar felaktigt datumformat
                 Console.WriteLine("Felaktigt datumformat. Försök igen.");
                 return; // Avslutar metoden om datumet är felaktigt
             }
@@ -135,15 +138,19 @@ namespace AngelicGoodGuys
         // Metod för att lista alla personer
         static void ListPersons()
         {
-            Console.WriteLine("Lista över alla personer:");
+            // Kollar om listan är tom
+            if (List.Count == 0)
+                Console.WriteLine("Inga personer i listan ännu");
 
-            // Loopar igenom varje person i listan och skriver ut deras information
-            foreach (Person p in List)
-            {
-                // Anropar ToString-metoden för att få en snygg representation av personen
-                Console.WriteLine(p.ToString());
-                Console.WriteLine("---------------------");
-            }
+            else
+                // Om listan inte är tom så loopar vi igenom varje person i listan och skriver ut deras information
+                foreach (Person p in List)
+                {
+                    Console.WriteLine("Lista över alla personer:");
+                    // Anropar ToString-metoden för att få en snygg representation av personen
+                    Console.WriteLine(p.ToString());
+                    Console.WriteLine("---------------------");
+                }
         }
     }
 }
